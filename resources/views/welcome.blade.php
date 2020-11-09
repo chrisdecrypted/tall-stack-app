@@ -1,7 +1,6 @@
 @extends('layouts.app')
-@livewire('counter')
+
 @section('content')
-
-
+@livewire('counter')
 
 @endsection
