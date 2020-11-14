@@ -1,6 +1,4 @@
-# To-Do App
-
-[https://github.com/cmurray21/tall-stack-app](https://github.com/cmurray21/tall-stack-app)
+# To-Do App (TALL Stack)
 
 This was my first time using the TALL (Tailwinds, Alpine.js, Laravel, Livewire) Stack. There was a bit of a learning curve, but once I started learning more about the different layers of the stack, I started to see the bigger picture of what developing with these tools might look like.
 
