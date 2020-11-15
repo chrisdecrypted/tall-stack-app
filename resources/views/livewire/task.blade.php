@@ -34,7 +34,6 @@
             <input type="text" class="w-4/5" x-model="todoTitle" @keydown.enter="addTodo()" />
             <button class="w-1/5 bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-2 rounded"
                 x-model="todoTitle" @click="addTodo()">Add +</button>
-               <?php echo $tasks; ?>
         </div>
     </div>
 
