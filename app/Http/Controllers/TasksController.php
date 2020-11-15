@@ -48,8 +48,10 @@ class TasksController extends Controller
     public function show($id)
     {
         $tasks = DB::select('select * from tasks;');
-
+        
         return view('welcome', ['description' => $tasks]);
+        
+        
     }
 
     /**
