@@ -15,7 +15,7 @@ class TasksController extends Controller
      */
     public function index()
     {
-        //
+     return view('welcome');
     }
 
     /**
@@ -36,7 +36,7 @@ class TasksController extends Controller
      */
     public function store(Request $request)
     {
-        //
+    //
     }
 
     /**
@@ -47,11 +47,7 @@ class TasksController extends Controller
      */
     public function show($id)
     {
-        $tasks = DB::select('select * from tasks;');
-        
-        return view('welcome', ['description' => $tasks]);
-        
-        
+      //
     }
 
     /**
