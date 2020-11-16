@@ -3,11 +3,13 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
+use DB;
 
 class Task extends Component
 {
     public function render()
     {
-        return view('livewire.task');
+        $tasks = DB::table('tasks')->get(); 
+        return view('livewire.task', ['tasks' => $tasks]);
     }
 }

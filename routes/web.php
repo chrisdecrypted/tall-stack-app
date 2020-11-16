@@ -15,8 +15,9 @@ use App\Http\Controllers\TasksController;
 |
 */
 
-Route::resource('tasks',TasksController::class);
+
 
 
 Route::view('/', 'welcome')->name('home');
 
+// Route::resource('task',TasksController::class);

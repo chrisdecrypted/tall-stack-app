@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Task;
-use DB;
 
 class TasksController extends Controller
 {
@@ -36,7 +35,19 @@ class TasksController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, array(
+            'task_description' => 'required|max:255',
+            'is_complete' => 'required'
+        ));
+
+        // Send to DB
+        $tasks = new task;
+        $tasks->task_description = $request->task_description;
+        $tasks->is_complete = 0;
+        $tasks->save();
+
+        return redirect()->route('tasks.show', $tasks->id);
+
     }
 
     /**
@@ -47,11 +58,8 @@ class TasksController extends Controller
      */
     public function show($id)
     {
-        $tasks = DB::select('select * from tasks;');
-        
-        return view('welcome', ['description' => $tasks]);
-        
-        
+      //  
+
     }
 
     /**

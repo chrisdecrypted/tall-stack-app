@@ -14,8 +14,14 @@ class Task extends Model
      *
      * @var string
      */
+
     protected $table = 'tasks';
     public $primary_key = "id";
+    public $fillable = [
+        'task_description',
+            'is_complete',
+    ];
 
-    
 }
+
+Task::all();
