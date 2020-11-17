@@ -2,6 +2,6 @@
 
 @section('content')
 
-@livewire('task')
+@livewire('to-do')
 
 @endsection
