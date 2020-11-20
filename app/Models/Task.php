@@ -23,5 +23,6 @@ class Task extends Model
         'is_complete',
     ];
 
+  
 }
 

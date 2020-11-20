@@ -10,28 +10,43 @@ class ToDo extends Component
 {
 
     public $tasks;
-    public $desc;
-    public $save;
-    public $markComplete;
+    public $completedTasks;
+    public $incompleteTasks;
+    public $task_description;
+    public $newTodo;
+    public $input;
+
+    protected $rules = [
+        'input' => 'required|max:255',
+    ];
+
 
     public function mount()
     {
         $this->tasks = Task::get();
+        
+        $this->incompleteTasks = $this->tasks->filter( function($task) {
+            return  ! $task->is_complete;
+         });
+         $this->completedTasks = $this->tasks->filter( function($task) {
+            return  $task->is_complete;
+         });
     }
 
-    public function save()
-    {
+    public function markComplete() {
+        $this->incompleteTasks = $this->tasks->filter( function($task) {
+            return  ! $task->is_complete;
+         });
+        return view('livewire.to-do');
 
-        $desc = $this->tasks->task_description;
-        $save = Task::save();
-        dd($desc);
     }
 
-    public function mark()
-    {
-        $markComplete = $this->tasks->is_complete = 1;
-        dd($markComplete);
+    public function saveDesc() {
+      $this->input = $this->tasks->filter( function($task){
+          return $task->task_description;
+      });
     }
+
 
     public function render()
     {

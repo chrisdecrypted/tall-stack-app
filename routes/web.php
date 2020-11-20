@@ -19,4 +19,3 @@ use App\Http\Livewire\TaskComponent;
 
 
 Route::view('/', 'welcome')->name('home');
-
