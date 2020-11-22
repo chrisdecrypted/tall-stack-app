@@ -8,43 +8,28 @@ use Illuminate\Http\Request;
 
 class ToDo extends Component
 {
-
-    public $tasks;
-    public $completedTasks;
-    public $incompleteTasks;
-    public $task_description;
-    public $newTodo;
-    public $input;
-
-    protected $rules = [
-        'input' => 'required|max:255',
-    ];
-
+    public $tasks, $pendingTasks, $doneTasks, $input, $isComplete;
 
     public function mount()
     {
         $this->tasks = Task::get();
-        
-        $this->incompleteTasks = $this->tasks->filter( function($task) {
+
+        $this->pendingTasks = $this->tasks->filter( function($task) {
             return  ! $task->is_complete;
          });
-         $this->completedTasks = $this->tasks->filter( function($task) {
+
+         $this->doneTasks = $this->tasks->filter( function($task) {
             return  $task->is_complete;
          });
     }
 
     public function markComplete() {
-        $this->incompleteTasks = $this->tasks->filter( function($task) {
-            return  ! $task->is_complete;
-         });
-        return view('livewire.to-do');
-
+        echo $this->tasks[0]->is_complete;
+        return redirect('/');
     }
 
-    public function saveDesc() {
-      $this->input = $this->tasks->filter( function($task){
-          return $task->task_description;
-      });
+    public function addTask() {
+     //
     }
 
 
