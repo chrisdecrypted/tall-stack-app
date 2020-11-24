@@ -19,10 +19,10 @@ class Task extends Model
     protected $table = 'tasks';
     public $primary_key = "id";
     public $fillable = [
-        'task_description',
-        'is_complete',
+        'name',
+        'is_done',
     ];
 
-  
+ 
 }
 
