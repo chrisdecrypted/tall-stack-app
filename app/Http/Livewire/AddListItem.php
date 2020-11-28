@@ -4,10 +4,12 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 
-class ToDo extends Component
+class AddListItem extends Component
 {
+    public $input;
+
     public function render()
     {
-        return view('livewire.to-do');
+        return view('livewire.add-list-item');
     }
 }
