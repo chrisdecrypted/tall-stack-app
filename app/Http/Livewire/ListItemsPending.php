@@ -7,13 +7,13 @@ use Livewire\Component;
 
 class ListItemsPending extends Component
 {
-    public $tasks, $pendingTasks;
+    public $tasks;
 
     public function mount()
     {
         $this->tasks = Task::all(); // returns a collection, NOT a model
 
-        $this->pendingTasks = $this->tasks->filter( function($task) {
+        $this->tasks = $this->tasks->filter( function($task) {
             return  ! $task->is_done;
         });
     }

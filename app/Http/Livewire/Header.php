@@ -4,10 +4,10 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 
-class ToDo extends Component
+class Header extends Component
 {
     public function render()
     {
-        return view('livewire.to-do');
+        return view('livewire.header');
     }
 }
