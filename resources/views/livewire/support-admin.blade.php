@@ -1,4 +1,4 @@
- 
+
 <div class="relative min-h-screen flex flex-col">
     <div class="flex-grow w-full max-w-7xl mx-auto xl:px-8 lg:flex">
         <!-- Left sidebar & main wrapper -->
