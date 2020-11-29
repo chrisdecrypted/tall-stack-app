@@ -1,12 +1,10 @@
 
-<div class="w-full rounded-b bg-gray-100 px-4 py-4">
-    <p class="uppercase text-gray-400"> New task: </p>
-    <p class="uppercase text-gray-400"> {{ $input }}</p>
-    <form wire:submit.prevent="addTask">
-        <div class="flex bg-gray-200 justify-between">
-            <input wire:model="input" type="text" class="w-4/5" />
-            <button type="submit" class="w-1/5 bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-2 rounded">Add +</button>
+<div class="w-full px-4 py-4 bg-gray-100 rounded-b">
+    <p class="text-gray-400 uppercase"> New task: </p>
+    <form wire:model="input" wire:submit.prevent="addTask">
+        <div class="flex justify-between bg-gray-200">
+            <input  type="text" class="w-4/5" />
+            <button type="submit" class="w-1/5 px-2 py-2 font-bold text-gray-800 bg-gray-200 rounded hover:bg-gray-300">Add +</button>
         </div>
     </form>
-
 </div>

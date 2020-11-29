@@ -9,9 +9,8 @@
             <label for="{{ $task -> name }}">{{ $task -> name }}</label>
             <input wire:click="complete({{ $task -> id }})"
                    type="checkbox"
-                   class="w-6 h-6 mx-2 my-2 text-teal-600 form-check-input"
+                   class="w-6 h-6 mx-2 my-2 text-indigo-500 form-checkbox"
                    id="task"/>
-            {{ $task -> is_done }}
         </li>
     @empty
         <li class="flex justify-between w-full px-2 py-2 ml-2 text-gray-400">

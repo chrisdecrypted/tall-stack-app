@@ -16,7 +16,6 @@ class ListItemsPending extends Component
         });
     }
     public function complete($id) {
-//        $this->tasks = Task::all();
         $tasks = Task::find($id); // id passed to livewire from component
         $tasks->is_done = ! $tasks->is_done; // setting to 0 or 1 depending on the previous value before livewire click called
         $tasks->save();

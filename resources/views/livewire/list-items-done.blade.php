@@ -1,11 +1,11 @@
 {{-- Completed --}}
-<p class="uppercase text-gray-400"> Completed </p>
-<ul class="mb-6 border rounded-lg border-gray-100 divide-y divide-gray-100 divide-solid space-y-2">
+<p class="text-gray-400 uppercase"> Completed </p>
+<ul class="mb-6 space-y-2 border border-gray-100 divide-y divide-gray-100 rounded-lg divide-solid">
     @forelse ($tasks as $task)
-        <li class="text-gray-400 ml-2 py-2 px-2 line-through"> {{ $task -> name }}
-            {{ $task -> is_done }} </li>
+        <li class="px-2 py-2 ml-2 text-gray-400 line-through"> {{ $task -> name }}
+        </li>
     @empty
-        <li class="text-gray-400 ml-2 py-2 px-2"> Use the checkmark above to mark a task as complete. </li>
+        <li class="px-2 py-2 ml-2 text-gray-400"> Use the checkmark above to mark a task as complete. </li>
     @endforelse
 </ul>
 
