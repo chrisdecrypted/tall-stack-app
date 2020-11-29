@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\TaskComponent;
 
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
