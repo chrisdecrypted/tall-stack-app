@@ -17,19 +17,11 @@ class Task extends Model
      */
 
     protected $table = 'tasks';
-    public $id = "id";
     public $fillable = [
         'name',
         'is_done',
     ];
 
-
-//    public function scopeToggle ()
-//    {
-//        $this->is_done = ! $this->is_done;
-//        $this->save();
-//        return redirect('/');
-//    }
 
 
 }
