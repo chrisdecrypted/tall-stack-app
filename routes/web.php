@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TasksController;
+use App\Http\Livewire\TaskComponent;
 
 
 /*
@@ -15,8 +15,7 @@ use App\Http\Controllers\TasksController;
 |
 */
 
-Route::resource('tasks',TasksController::class);
+
 
 
 Route::view('/', 'welcome')->name('home');
-
