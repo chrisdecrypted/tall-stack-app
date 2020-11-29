@@ -11,7 +11,7 @@ class ListItemsDone extends Component
     public function mount()
     {
         $this->tasks = Task::all(); // returns a collection, NOT a model
-        $this->tasks = $this->tasks->filter( function($task) {
+        $this->tasks = $this->tasks->filter(function ($task) {
             return  $task->is_done;
         });
     }

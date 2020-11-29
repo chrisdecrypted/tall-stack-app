@@ -48,5 +48,3 @@ class SupportAdmin extends Component
         return view('livewire.support-admin');
     }
 }
-
-

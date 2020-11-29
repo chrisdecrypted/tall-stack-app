@@ -8,4 +8,3 @@
         <li class="text-gray-400 ml-2 py-2 px-2"> Use the checkmark above to mark a task as complete. </li>
     @endforelse
 </ul>
-

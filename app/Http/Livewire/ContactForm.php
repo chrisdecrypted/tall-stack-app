@@ -1,7 +1,6 @@
-<?php 
+<?php
 
 use Livewire\Component;
-
 
 class ContactForm extends Component
 {
@@ -25,4 +24,3 @@ class ContactForm extends Component
         Contact::create($validatedData);
     }
 }
-
